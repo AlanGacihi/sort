@@ -20,6 +20,6 @@ int main()
 {
     std::cout << "Process ID: " << getpid() << std::endl;
     std::cout << "Parent procees ID: " << getppid() << std::endl;
-    std::cout << "Owner's procees ID: " << getuid() << std::endl;
+    std::cout << "Owner's user ID: " << geteuid() << std::endl;
     std::cout << "Owner's group ID: " << getgid() << std::endl;
 }
