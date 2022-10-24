@@ -45,7 +45,7 @@ int main()
         after = (long int) sbrk(0);
         duration = (double(end - start)) / CLOCKS_PER_SEC;
         printf("CPU time used: %.2f seconds.\n", duration);
-        printf("Memory allocated: %ld seconds.\n", after - now);
+        printf("Memory allocated: %ld bytes.\n", after - now);
     }
 
     return 0;
