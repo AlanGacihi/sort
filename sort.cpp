@@ -1,6 +1,7 @@
 #include <set>
 #include <iostream>
 #include <cstdlib>
+#include <stdio.h>
 #include <sys/types.h>
 #include <pwd.h>
 #include <time.h>
