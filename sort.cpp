@@ -1,7 +1,6 @@
 #include <set>
 #include <iostream>
 #include <cstdlib>
-#define _POSIX_SOURCE
 #include <sys/types.h>
 #include <pwd.h>
 #include <unistd.h>
@@ -25,7 +24,7 @@ int main()
     uid_t  uid;
     
     if ((p = getpwuid(uid = geteuid())) == NULL)
-        perror("getpwuid() error");
+        std::cerr << "getpwuid() error" << std::endl;
     
     std::cout << "Process ID: " << getpid() << std::endl;
     std::cout << "Parent procees ID: " << getppid() << std::endl;
