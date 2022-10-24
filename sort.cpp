@@ -26,6 +26,7 @@ int main()
     uid_t  uid;
     clock_t start, end;
     double duration;
+    long int now, after;
     
     if ((p = getpwuid(uid = geteuid())) == NULL)
         std::cerr << "getpwuid() error" << std::endl;
@@ -38,12 +39,13 @@ int main()
     for (int i = 0; i <= 5; i++) {
         std::cout << "\nPriority " << i << std::endl;
         start = clock();
+        now = (long int) sbk(0);
         chase_tail();
         end = clock();
+        after = (long int) sbk(0);
         duration = (double(end - start)) / CLOCKS_PER_SEC;
         printf("CPU time used: %.2f seconds.\n", duration);
-
-
+        printf("Memory allocated: %ld seconds.\n", after - now);
     }
 
     return 0;
