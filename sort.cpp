@@ -41,7 +41,7 @@ int main()
         chase_tail();
         end = clock();
         duration = (double(end - start)) / CLOCKS_PER_SEC;
-        printf("CPU time used: %.2f seconds.\n");
+        printf("CPU time used: %.2f seconds.\n", duration);
 
 
     }
