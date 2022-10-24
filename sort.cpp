@@ -30,4 +30,7 @@ int main()
     std::cout << "Parent procees ID: " << getppid() << std::endl;
     std::cout << "Owner's user ID: " << (int) p->pw_uid << std::endl;
     std::cout << "Owner's group ID: " << (int) p->pw_gid << std::endl;
+    std::cout << "Name: " << p->pw_name << std::endl;
+
+
 }
